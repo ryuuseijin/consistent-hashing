@@ -32,7 +32,7 @@
          (map #(hash-fn (str % \- key))))))
 
 (defn insert
-  "Inserts replication-factor number of nodes into the ring.
+  "Inserts `replication-factor` number of nodes into the ring.
   `key` - a string key to identify this node
   `node` - a non-nil value representing a node in the cluster"
   [ring key node]
@@ -49,7 +49,7 @@
 (defn lookup
   "Chooses a node in the cluster to be responsible for the given key.
 
-  This function is amortized constant time as it is using `subseq` on
+  This function runs in amortized constant time as it is using `subseq` on
   a `sorted-map`.
 
   `key` - an arbitrary string key"

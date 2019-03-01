@@ -1,6 +1,6 @@
 # simple-consistent-hashing
 
-A consistent hashing implementation using a sorted-map as the core datastructure with amortized constant time lookups.
+A consistent hashing implementation using sorted-map as the core datastructure with amortized constant time lookups.
 
 ## Usage
 
