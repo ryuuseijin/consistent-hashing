@@ -34,9 +34,8 @@
 (defn insert
   "Inserts `replication-factor` number of nodes into the ring.
   `key` - a string key to identify this node
-  `node` - a non-nil value representing a node in the cluster"
+  `node` - a value representing a node in the cluster"
   [ring key node]
-  (assert (some? node))
   (->> (map vector (replica-hashes ring key) (repeat node))
        (into ring)))
 
