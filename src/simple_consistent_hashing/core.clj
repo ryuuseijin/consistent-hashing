@@ -1,5 +1,5 @@
 (ns simple-consistent-hashing.core
-  "A consistent hashing implementation using a sorted-map as the core datastructure with fast lookups."
+  "A consistent hashing implementation using sorted-map as the core datastructure for amortized constant time lookups."
   (:require [digest]))
 
 (def default-hash-fn digest/sha-256)
