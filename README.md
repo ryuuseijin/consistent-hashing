@@ -2,6 +2,8 @@
 
 A consistent hashing implementation using sorted-map as the core datastructure for amortized constant time lookups.
 
+    [ryuuseijin/consistent-hashing "1.0.0"]
+
 ## Usage
 
     user> (require '[ryuuseijin.consistent-hashing :as ch])
