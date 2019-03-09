@@ -1,23 +1,23 @@
-# simple-consistent-hashing
+# consistent-hashing
 
 A consistent hashing implementation using sorted-map as the core datastructure for amortized constant time lookups.
 
 ## Usage
 
-    user> (require ['simple-consistent-hashing.core :as 'sch])
+    user> (require '[ryuuseijin.consistent-hashing :as ch])
     nil
-    user> (def r (-> (sch/ring 1)
-                     (sch/insert "a" :a)
-                     (sch/insert "b" :b)
-                     (sch/insert "c" :c)))
+    user> (def r (-> (ch/ring 1)
+                     (ch/insert "a" :a)
+                     (ch/insert "b" :b)
+                     (ch/insert "c" :c)))
     #'user/r
     user> r
     {"1bb556efd38c5a70c450d4afeaa5d4f528d095d85723f1037dddc1a5e59c6476" :b,
      "7c7fa2ffc73ed8a92f69f9fd7e4363b970d57b08c1e811a0868e7332510764ff" :c,
      "d00146933186bebfd751d39228f587dee72346fb910e0ff2bfe66d3ce4211086" :a}
-    user> (sch/lookup r "key1")
+    user> (ch/lookup r "key1")
     ["d00146933186bebfd751d39228f587dee72346fb910e0ff2bfe66d3ce4211086" :a]
-    user> (sch/lookup r "key3")
+    user> (ch/lookup r "key3")
     ["1bb556efd38c5a70c450d4afeaa5d4f528d095d85723f1037dddc1a5e59c6476" :b]
 
 ## License

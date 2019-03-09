@@ -1,6 +1,6 @@
-(ns simple-consistent-hashing.core-test
+(ns ryuuseijin.consistent-hashing-test
   (:require [clojure.test :refer :all]
-            [simple-consistent-hashing.core :refer :all]))
+            [ryuuseijin.consistent-hashing :refer :all]))
 
 (deftest test-ring
   (testing "creating an empty ring"

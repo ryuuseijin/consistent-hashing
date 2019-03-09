@@ -1,4 +1,4 @@
-(ns simple-consistent-hashing.core
+(ns ryuuseijin.consistent-hashing
   "A consistent hashing implementation using sorted-map as the core datastructure for amortized constant time lookups."
   (:require [digest]))
 
