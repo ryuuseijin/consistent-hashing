@@ -1,6 +1,6 @@
 # consistent-hashing
 
-A consistent hashing implementation using sorted-map as the core datastructure for amortized constant time lookups.
+A consistent hashing implementation using sorted-map as the core datastructure for logarithmic time lookups.
 
     [ryuuseijin/consistent-hashing "1.0.0"]
 

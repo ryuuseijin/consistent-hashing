@@ -1,5 +1,5 @@
 (ns ryuuseijin.consistent-hashing
-  "A consistent hashing implementation using sorted-map as the core datastructure for amortized constant time lookups."
+  "A consistent hashing implementation using sorted-map as the core datastructure for logarithmic time lookups."
   (:require [digest]))
 
 (def default-hash-fn digest/sha-256)
@@ -48,7 +48,7 @@
 (defn lookup
   "Chooses a node in the cluster to be responsible for the given key.
 
-  This function runs in amortized constant time as it is using `subseq` on
+  This function runs in logarithmic time as it is using `subseq` on
   a `sorted-map`.
 
   `key` - an arbitrary string key"
